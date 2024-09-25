@@ -1,9 +1,9 @@
 terraform {
 
   backend "s3" {
-    bucket = "miracleholdings-inc"
+    bucket = "amurthybucket"
     key    = "terraform-states/credit-boost/terraform.tfstate"
-    region = "us-west-2"
+    region = "us-east-2"
   }
   required_providers {
     aws = {
