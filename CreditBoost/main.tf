@@ -1,9 +1,9 @@
 terraform {
 
   backend "s3" {
-    bucket = "amurthybucket"
+    bucket = "amurthy-bucket"
     key    = "terraform-states/credit-boost/terraform.tfstate"
-    region = "us-east-2"
+    region = "us-west-2"
   }
   required_providers {
     aws = {
