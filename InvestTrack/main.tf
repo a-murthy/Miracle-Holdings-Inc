@@ -21,7 +21,7 @@ provider "aws" {
 resource "aws_security_group" "Critical-Security-Group" {
   name        = "Critical-Security-Group"
   description = "Open access within this region"
-  vpc_id      = "vpc-0a370eb440da35c29"
+  vpc_id      = "vpc-0863c3a87146a67b9"
 
   ingress {
     from_port   = 0
