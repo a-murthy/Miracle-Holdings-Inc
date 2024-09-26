@@ -1,15 +1,16 @@
 terraform {
 
-  backend "s3" {
-    bucket               = "amurthy-bucket"
-    workspace_key_prefix = "terraform-states/cost-insight"
-    key                  = "terraform.tfstate"
-    region               = "us-west-2"
-  }
   required_providers {
     aws = {
       version = ">= 5.39.0"
       source  = "hashicorp/aws"
+    }
+  }
+  cloud {
+    organization = "amurthy-tfc"
+    workspaces {
+      project = "cost_insight"
+      tags    = ["cost_insight"]
     }
   }
 }
