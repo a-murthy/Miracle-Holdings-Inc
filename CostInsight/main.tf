@@ -1,10 +1,10 @@
 terraform {
 
   backend "s3" {
-    bucket               = "amurthybucket"
+    bucket               = "amurthy-bucket"
     workspace_key_prefix = "terraform-states/cost-insight"
     key                  = "terraform.tfstate"
-    region               = "us-east-2"
+    region               = "us-west-2"
   }
   required_providers {
     aws = {
