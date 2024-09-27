@@ -1,14 +1,16 @@
 terraform {
 
-  backend "s3" {
-    bucket = "amurthy-bucket"
-    key    = "terraform-states/credit-boost/terraform.tfstate"
-    region = "us-west-2"
-  }
   required_providers {
     aws = {
       version = ">= 5.39.0"
       source  = "hashicorp/aws"
+    }
+  }
+  cloud {
+    organization = "amurthy-tfc"
+    workspaces {
+      project = "credit_boost"
+      name    = "credit_boost_default"
     }
   }
 }
